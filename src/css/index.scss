@@ -1,4 +1,10 @@
 @import 'variables';
+@import 'mixins';
+
+* {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
+}
 
 body {
   width: 1425px;
@@ -13,9 +19,12 @@ nav {
   div {
     display: flex;
     justify-content: space-between;
-    width: 150px;
+    width: 200px;
     height: 60px;
     margin-right: 40px;
+    font-size: 21px;
+    color: white;
+    font-weight: 600;
   }
 }
 
@@ -25,33 +34,43 @@ nav {
 }
 
 h1 {
-  margin-top: 0;
+  margin-top: 20px;
+  font-size: 35px;
 }
 
 main {
-  background: url('../../dist/images/park.jpg') center/cover;
+  background: url('../../dist/images/park.jpg');
+  background-position: top;
+  background-size: cover;
   height: 590px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 
 #main-dog{
-  width: 325px;
+  width: 340px;
   border-radius: 50%;
   border: 5px solid $main-accent-color;
+  margin-top: 10px;
+}
+
+h2 {
+  @include subheader();
 }
 
 section {
   display: flex;
   justify-content: space-evenly;
+  height: 655px;
 
   div {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 35px;
   }
 
   p {
@@ -63,10 +82,15 @@ section {
   }
 }
 
+h3 {
+  font-size: 22px;
+}
+
 .dog-pic {
-  width: 250px;
+  width: 240px;
   border-radius: 50%;
   border: 3px solid $main-accent-color;
+  margin-top: 10px;
 }
 
 footer {
@@ -78,13 +102,13 @@ footer {
   width: 100%;
 
   div img {
-    margin-left: 30px;
-    margin-right: 30px;
-    width: 50px;
+    margin: 15px 30px 15px 30px;
   }
 }
 
 h4 {
-  font-size: 25px;
+  font-size: 22px;
   color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

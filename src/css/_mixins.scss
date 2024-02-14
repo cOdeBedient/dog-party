@@ -1,0 +1,7 @@
+@mixin subheader() {
+    color: $main-accent-color;
+    border: 5px solid $main-accent-color;
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    font-size: 22px;
+}
