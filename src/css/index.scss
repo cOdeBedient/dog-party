@@ -1,19 +1,44 @@
 @import 'variables';
 
 body {
-  width: 1063px;
+  width: 1425px;
+}
+
+nav {
+  background-color: $secondary-accent-color;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+    height: 60px;
+    margin-right: 40px;
+  }
+}
+
+.dog-icon {
+  width: 40px;
+  margin-left: 25px;
+}
+
+h1 {
+  margin-top: 0;
 }
 
 main {
   background: url('../../dist/images/park.jpg') center/cover;
-  height: 438px;
+  height: 590px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-nav {
-  // Example of using a variable:
-  background-color: $secondary-accent-color;
-}
-
-.dog-icon {
-  width: 50px;
+#main-dog{
+  width: 325px;
+  border-radius: 50%;
+  border: 5px solid $main-accent-color;
 }
